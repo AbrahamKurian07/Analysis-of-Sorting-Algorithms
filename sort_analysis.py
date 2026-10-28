@@ -133,36 +133,48 @@ for i in range(1,1000):
     end = time.perf_counter()
     if check_sorted(a1):
         t_ins.append(end-start)
+    else:
+        raise ValueError("Not sorted")
 
     start = time.perf_counter()
     selection_sort(a2)
     end = time.perf_counter()
     if check_sorted(a2):
         t_sel.append(end-start)
+    else:
+        raise ValueError("Not sorted")
 
     start = time.perf_counter()
     bubble_sort(a3)
     end = time.perf_counter()
     if check_sorted(a3):
         t_bub.append(end-start)
+    else:
+        raise ValueError("Not sorted")
 
     start = time.perf_counter()
     mergesort(a4)
     end = time.perf_counter()
     if check_sorted(a4):
         t_mer.append(end-start)
+    else:
+        raise ValueError("Not sorted")
 
     start = time.perf_counter()
     quicksort(a5, 0, i-1)
     end = time.perf_counter()
     if check_sorted(a5):
         t_qui.append(end-start)
+    else:
+        raise ValueError("Not sorted")
 
     start = time.perf_counter()
     a6.sort()
     end = time.perf_counter()
     if check_sorted(a6):
         t_inbuilt.append(end-start)
+    else:
+        raise ValueError("Not sorted")
 
 slope_ins, inter_ins = np.polyfit(np.log(ns[50:]), np.log(t_ins[50:]), 1)
 slope_sel, inter_sel = np.polyfit(np.log(ns[50:]), np.log(t_sel[50:]), 1)
