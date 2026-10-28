@@ -1,7 +1,7 @@
 # Analysis-of-Sorting-Algorithms
 
 Results:
-Time complexities: $O(N^\_)$
+Time complexities: $O(N^)$
 Insertion sort: 2.137
 Selecion sort: 2.146
 Bubble sort: 2.119
